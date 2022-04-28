@@ -30,14 +30,7 @@ Funcionalidade: Cadastro de usuários
             | emailtest@gmail.com | abc123 | pwd123         |Oops! Senhas não são iguais.        |
             |                     |        |                |Oops! Informe seu email e sua senha.|
 
-
-
-# @email
-# Cenário: Email não informado
-#     Dado que acesso a pagina de cadastro
-#     Quando submeto meu cadastro com:
-#         |email|                |
-#         |senha|Pwd123!|
-#         |senha_confirma|Pwd123!|
-#     Então devo ver a mensagem: "Oops! Informe seu email."
-
+    @temp
+    Cenário: Validação do Campo Email
+        Quando Dado que acesso a pagina de cadastro
+        Entao deve exibir o seguinte css: "input[type=email]"
